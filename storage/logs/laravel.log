@@ -1,0 +1,15 @@
+[2022-12-31 11:11:05] local.INFO: $request  
+[2022-12-31 11:11:05] local.INFO: array (
+  '_token' => 'svoZdHQIn54tRYzmWtwt5Cy3vrZ5aK3d6lpy7OBA',
+  'url' => 'https://www.techpit.jp/',
+  'comment' => 'aaaaaaaaaaaaaaaaaaaaaaaa',
+  'category' => '1',
+)  
+[2022-12-31 11:11:05] local.INFO: $useCase  
+[2022-12-31 11:11:06] local.INFO: $request  
+[2022-12-31 11:11:06] local.INFO: array (
+  '_token' => 'svoZdHQIn54tRYzmWtwt5Cy3vrZ5aK3d6lpy7OBA',
+  'url' => 'https://www.techpit.jp/',
+  'comment' => 'aaaaaaaaaaaaaaaaaaaaaaaa',
+  'category' => '1',
+)  
