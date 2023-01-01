@@ -15,6 +15,7 @@ public/js/**
 public/css/**
 
 storage/*.key
+storage/logs
 .env
 Homestead.yaml
 Homestead.json
