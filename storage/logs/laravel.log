@@ -1,1 +1,51 @@
 [2023-01-01 08:26:25] local.ERROR:   
+[2023-01-01 09:43:00] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (Error(code: 0): Class \"Illuminate\\Support\\Collection\" not found at /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Support/helpers.php:109)
+[stacktrace]
+#0 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(240): collect(Array)
+#1 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(202): Illuminate\\Log\\LogManager->createStackDriver(Array)
+#2 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(118): Illuminate\\Log\\LogManager->resolve('stack')
+#3 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(98): Illuminate\\Log\\LogManager->get('stack')
+#4 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(547): Illuminate\\Log\\LogManager->driver()
+#5 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(122): Illuminate\\Log\\LogManager->error('During inherita...', Array)
+#6 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/app/Exceptions/Handler.php(39): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#7 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(92): App\\Exceptions\\Handler->report(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#8 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(134): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleException(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#9 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleShutdown()
+#10 {main}
+"} 
+[2023-01-01 09:43:00] laravel.ERROR: During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Return type of ...', '/Users/12iphone...', 1277)
+#1 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/composer/ClassLoader.php(578): include('/Users/12iphone...')
+#2 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/composer/ClassLoader.php(432): Composer\Autoload\ClassLoader::Composer\Autoload\{closure}('/Users/12iphone...')
+#3 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#4 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config('aliases')
+#6 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/artisan(37): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\\Support\\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8192, 'Return type of ...', '/Users/12iphone...', 1277)
+#1 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/composer/ClassLoader.php(578): include('/Users/12iphone...')
+#2 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/composer/ClassLoader.php(432): Composer\\Autoload\\ClassLoader::Composer\\Autoload\\{closure}('/Users/12iphone...')
+#3 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\\Autoload\\ClassLoader->loadClass('Illuminate\\\\Supp...')
+#4 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect(Array)
+#5 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\\Foundation\\PackageManifest->config('aliases')
+#6 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#7 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#8 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#9 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#10 /Users/12iphone/Desktop/LaravelBookmark_FatController/src/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main} at /Users/12iphone/Desktop/LaravelBookmark_FatController/src/vendor/laravel/framework/src/Illuminate/Support/Collection.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2023-01-01 10:32:50] testing.ERROR: Received Mockery_2_App_Lib_LinkPreview_LinkPreviewInterface::getPreview(), but no expectations were specified  
+[2023-01-01 10:33:00] testing.ERROR: Received Mockery_2_App_Lib_LinkPreview_LinkPreviewInterface::getPreview(), but no expectations were specified  
+[2023-01-01 10:38:39] testing.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null (SQL: insert into `bookmarks` (`url`, `category_id`, `user_id`, `comment`, `page_title`, `page_description`, `page_thumbnail_url`, `updated_at`, `created_at`) values (https://notfound.example.com/, 1, ?, テスト用のコメント, モックのタイトル, モックのdescription, https://i.gyazo.com/634f77ea66b5e522e7afb9f1d1dd75cb.png, 2023-01-01 10:38:39, 2023-01-01 10:38:39))  
+[2023-01-01 10:39:10] testing.ERROR: URLからメタ情報の取得に失敗  
+[2023-01-01 10:39:25] testing.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null (SQL: insert into `bookmarks` (`url`, `category_id`, `user_id`, `comment`, `page_title`, `page_description`, `page_thumbnail_url`, `updated_at`, `created_at`) values (https://notfound.example.com/, 1, ?, テスト用のコメント, モックのタイトル, モックのdescription, https://i.gyazo.com/634f77ea66b5e522e7afb9f1d1dd75cb.png, 2023-01-01 10:39:25, 2023-01-01 10:39:25))  
+[2023-01-01 10:39:36] testing.ERROR: URLからメタ情報の取得に失敗  
