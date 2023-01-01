@@ -3,14 +3,20 @@
 namespace App\Bookmark\UseCase;
 
 use App\Models\Bookmark;
-use Dusterio\LinkPreview\Client;
-use App\Lib\LinkPreview\LinkPreview;
+use App\Lib\LinkPreview\LinkPreviewInterface;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 
 final class CreateBookmarkUseCase
 {
+    private LinkPreviewInterface $linkPreview;
+
+    public function __construct(LinkPreviewInterface $linkPreview)
+    {
+        $this->linkPreview = $linkPreview;
+    }
     /**
      * ブックマーク作成処理
      *
@@ -30,15 +36,16 @@ final class CreateBookmarkUseCase
     public function handle(string $url, int $category, string $comment)
     {
         try {
-            $preview = (new LinkPreview())->getPreview($url);
+            $preview = $this->linkPreview->getPreview($url);
+
             $model = new Bookmark();
             $model->url = $url;
             $model->category_id = $category;
             $model->user_id = Auth::id();
             $model->comment = $comment;
-            $model->page_title = $preview['title'];
-            $model->page_description = $preview['description'];
-            $model->page_thumbnail_url = $preview['cover'];
+            $model->page_title = $preview->title;
+            $model->page_description = $preview->description;
+            $model->page_thumbnail_url = $preview->cover;
             $model->save();
         } catch (\Exception $e) {
             Log::error($e->getMessage());
